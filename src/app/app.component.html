@@ -1,0 +1,276 @@
+<nav [class.scrolled]="isScrolled" class="navbar glass">
+  <div class="nav-content">
+    <div class="logo">
+      <span class="logo-text">PK</span>
+    </div>
+    <ul class="nav-links">
+      <li><a (click)="scrollTo('home')" [class.active]="activeSection === 'home'">Home</a></li>
+      <li><a (click)="scrollTo('experience')" [class.active]="activeSection === 'experience'">Experience</a></li>
+      <li><a (click)="scrollTo('projects')" [class.active]="activeSection === 'projects'">Projects</a></li>
+      <li><a (click)="scrollTo('skills')" [class.active]="activeSection === 'skills'">Skills</a></li>
+      <li><a (click)="scrollTo('education')" [class.active]="activeSection === 'education'">Education</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero fade-in">
+    <div class="hero-content">
+      <div class="hero-badge">Backend Engineer</div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="text-gradient">Puneet Kumar</span>
+      </h1>
+      <p class="hero-subtitle">
+        Backend Engineer with full-stack expertise, specializing in scalable API development and cloud-native architectures.
+      </p>
+      
+      <div class="hero-actions">
+        <a href="mailto:p22082002k@gmail.com" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+        <a href="https://linkedin.com/in/puneet-kumar-4057342a1/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/botPuneet" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="contact-info">
+        <span class="contact-item"><i class="fas fa-phone"></i> +91 8920375390</span>
+      </div>
+    </div>
+    
+    <div class="hero-visual">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      <div class="code-window glass">
+        <div class="window-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="title">puneet.ts</span>
+        </div>
+        <div class="window-body">
+          <pre><code><span class="keyword">const</span> <span class="variable">engineer</span> = &#123;
+  <span class="property">name</span>: <span class="string">'Puneet Kumar'</span>,
+  <span class="property">role</span>: <span class="string">'Backend Engineer'</span>,
+  <span class="property">focus</span>: [<span class="string">'Scalable APIs'</span>, <span class="string">'Cloud-native'</span>, <span class="string">'MLOps'</span>],
+  <span class="property">techStack</span>: [
+    <span class="string">'Node.js'</span>, <span class="string">'FastAPI'</span>, <span class="string">'MongoDB'</span>,
+    <span class="string">'DynamoDB'</span>, <span class="string">'AWS'</span>, <span class="string">'Angular'</span>
+  ],
+  <span class="function">solveProblems</span>: () => <span class="boolean">true</span>
+&#125;;</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="section-header">
+      <h2>Work Experience</h2>
+      <div class="header-line"></div>
+    </div>
+    
+    <div class="timeline">
+      <div class="timeline-item glass">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="item-header">
+            <h3>Software Engineer <span class="badge">Internship + FTE</span></h3>
+            <span class="company">Accenture</span>
+            <span class="date">Feb 2025 – Present</span>
+          </div>
+          <ul class="achievements">
+            <li>Engineered scalable RESTful APIs (GET, POST, PUT) to process real-time sensor data from AVEVA CDS, improving response time by 30% and reducing latency by ~25% using async processing.</li>
+            <li>Architected and deployed a cloud-native data pipeline on AWS (Lambda, Fargate, Step Function, SQS), handling 10K+ events/day with >99% reliability for ML systems.</li>
+            <li>Implemented secure architecture using AWS VPC, rate limiting, and microservices design, improving uptime to 99.9%.</li>
+            <li>Orchestrated end-to-end ML pipelines reducing deployment time by 40% and enabling real-time inference (<200ms latency).</li>
+            <li>Designed DynamoDB-based model configuration storage and prediction APIs supporting ~1K+ requests/min.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item glass">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="item-header">
+            <h3>App Developer <span class="badge">Internship</span></h3>
+            <span class="company">Zealous</span>
+            <span class="date">Feb 2023 – Jun 2023</span>
+          </div>
+          <ul class="achievements">
+            <li>Launched a scalable mobile learning platform using Kotlin and Firebase; achieved 500+ active users and 4.2+ rating in the first month.</li>
+            <li>Implemented OAuth 2.0 with role-based access control ensuring secure authentication.</li>
+            <li>Integrated Firebase Cloud Messaging (FCM), boosting user engagement by 30% and retention by ~20%.</li>
+            <li>Crafted responsive UI using Kotlin XML layouts, reducing navigation time by 25%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <div class="header-line"></div>
+    </div>
+    
+    <div class="grid projects-grid">
+      <div class="card project-card glass">
+        <div class="card-content">
+          <h3>Upyog and Udyog <span class="subtitle">Bidding Platform</span></h3>
+          <p>Engineered a scalable bidding system with real-time updates, reducing transaction delays by ~35%.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> Integrated Firebase & MongoDB real-time sync (<1s latency).</li>
+            <li><i class="fas fa-check"></i> Scaled user base by 20% through secure authentication.</li>
+            <li><i class="fas fa-check"></i> Designed backend APIs using Node.js and GraphQL for 500+ concurrent users.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">GraphQL</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card project-card glass">
+        <div class="card-content">
+          <h3>Portfolio Website</h3>
+          <p>Created a personal portfolio improving page load speed by ~40% via server-side rendering.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> Achieved 90+ Lighthouse score ensuring optimized performance.</li>
+            <li><i class="fas fa-check"></i> Enhanced recruiter engagement by ~25% through interactive UI.</li>
+            <li><i class="fas fa-check"></i> Optimized contact flows and responsive rendering.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">SSR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="section-header">
+      <h2>Technical Skills</h2>
+      <div class="header-line"></div>
+    </div>
+    
+    <div class="skills-container">
+      <div class="skill-category glass">
+        <div class="category-icon text-gradient"><i class="fas fa-code"></i></div>
+        <h3>Languages</h3>
+        <div class="tags flex-wrap">
+          <span class="tag tag-primary">C++</span>
+          <span class="tag tag-primary">JavaScript (ES6+)</span>
+          <span class="tag tag-primary">Python</span>
+          <span class="tag tag-primary">Java</span>
+          <span class="tag tag-primary">SQL</span>
+          <span class="tag tag-primary">HTML5</span>
+          <span class="tag tag-primary">CSS3</span>
+        </div>
+      </div>
+
+      <div class="skill-category glass">
+        <div class="category-icon text-gradient"><i class="fas fa-layer-group"></i></div>
+        <h3>Frameworks</h3>
+        <div class="tags flex-wrap">
+          <span class="tag tag-secondary">Node.js</span>
+          <span class="tag tag-secondary">Express</span>
+          <span class="tag tag-secondary">React</span>
+          <span class="tag tag-secondary">Angular</span>
+          <span class="tag tag-secondary">RESTful APIs</span>
+          <span class="tag tag-secondary">GraphQL</span>
+        </div>
+      </div>
+
+      <div class="skill-category glass">
+        <div class="category-icon text-gradient"><i class="fas fa-cloud"></i></div>
+        <h3>Cloud & Tools</h3>
+        <div class="tags flex-wrap">
+          <span class="tag tag-accent">AWS (EC2, Lambda, S3, ECS)</span>
+          <span class="tag tag-accent">Docker</span>
+          <span class="tag tag-accent">Git & GitHub</span>
+          <span class="tag tag-accent">MongoDB</span>
+          <span class="tag tag-accent">Redis</span>
+          <span class="tag tag-accent">Linux</span>
+        </div>
+      </div>
+
+      <div class="skill-category glass">
+        <div class="category-icon text-gradient"><i class="fas fa-brain"></i></div>
+        <h3>Machine Learning</h3>
+        <div class="tags flex-wrap">
+          <span class="tag">TensorFlow</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Scikit-Learn</span>
+          <span class="tag">Keras</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="additional-skills glass">
+      <h3>Additional Knowledge</h3>
+      <p>System Design basics, Microservices Architecture, Authentication (JWT, OAuth), API Security / Rate Limiting, Message Queues concepts.</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="section-header">
+      <h2>Education & Coursework</h2>
+      <div class="header-line"></div>
+    </div>
+    
+    <div class="grid education-grid">
+      <div class="education-card glass">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>B.Tech</h3>
+        <span class="institution">Netaji Subhas University of Technology</span>
+        <span class="date">2021 – 2025</span>
+        <p class="performance">Performance: 7.4 CGPA</p>
+      </div>
+
+      <div class="education-card glass">
+        <div class="edu-icon"><i class="fas fa-school"></i></div>
+        <h3>Higher Secondary</h3>
+        <span class="institution">Jinvani Bharti School</span>
+        <span class="date">2019 – 2020</span>
+        <p class="performance">Performance: 91%</p>
+      </div>
+    </div>
+    
+    <div class="extracurricular glass mt-8">
+      <h3>Coursework & Extra Curricular</h3>
+      <ul class="feature-list">
+        <li><i class="fas fa-star text-gradient"></i> Solved 500+ questions on LeetCode, GFG, and Codeforces.</li>
+        <li><i class="fas fa-trophy text-gradient"></i> LeetCode Rating 1400+.</li>
+        <li><i class="fas fa-book-open text-gradient"></i> <strong>Core Subjects:</strong> Data Structures, Algorithms, Database Management, OOPS, Networking, AI in Mechanical Engineering, Robotics, Java, IOT.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer glass">
+  <div class="footer-content">
+    <div class="footer-logo">PK</div>
+    <div class="footer-text">
+      <p>© 2026 Puneet Kumar. Built with Angular.</p>
+    </div>
+    <div class="footer-social">
+      <a href="https://linkedin.com/in/puneet-kumar-4057342a1/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/botPuneet" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:p22082002k@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
